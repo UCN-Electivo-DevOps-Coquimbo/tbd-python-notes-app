@@ -1,5 +1,6 @@
 from datetime import datetime
 from modules.create_note import create_note
+from modules.import_note import importJson
 
 def call_create_note():
     name = input("Nombre de la nota: ")
@@ -32,7 +33,8 @@ def call_export_notes():
     print("Por implementar...")
 
 def call_import_notes():
-    print("Por implementar...")
+    fileName = str(input("Nombre del archivo(.json): "))
+    importJson(fileName)
 
 def call_filter_notes_by_date():
     print("Por implementar...")
