@@ -19,8 +19,9 @@ Los estudiantes deberán agruparse de a dos o tres integrantes. Luego, deberán 
 # Instrucciones
 1. Se debe generar un archivo con su funcionalidad en la carpeta `modules`. Debe llevar por nombre `<nombreFuncion>.py`.
 2. En dicho archivo, deberá desarrollar la funcionalidad solicitada. En estos archivos no se realizan llamadas a la consola de comandos (tanto input como output).
-2. Debe modificar la función respectiva en el archivo [functions.py](functions.py). Acá se pueden realizar consultas al usuario por consola de comandos.
-5. Probar la aplicación y verificar que todo este funcionando correctamente.
+3. Debe modificar la función respectiva en el archivo [functions.py](functions.py). Acá se pueden realizar consultas al usuario por consola de comandos.
+4. Probar la aplicación y verificar que todo este funcionando correctamente.
+5. Se debe modificar este README para indicar que la funcionalidad se desarrolló.
 
 # Estándares
 
