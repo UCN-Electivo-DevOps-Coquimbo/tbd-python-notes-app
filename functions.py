@@ -35,7 +35,16 @@ def call_import_notes():
     print("Por implementar...")
 
 def call_filter_notes_by_date():
-    print("Por implementar...")
+    from modules.data_manager import get_notes
+    from modules.notes_filtres import filter_notes_by_date
+    notas = get_notes()
+    # Solicitar fechas al usuario
+    fecha_inicio = input("Fecha de inicio (YYYY-MM-DD): ")
+    fecha_fin = input("Fecha de fin (YYYY-MM-DD): ")
+    notas_filtradas = filter_notes_by_date(notas, fecha_inicio, fecha_fin)
+    print("Notas filtradas por fecha:")
+    for nota in notas_filtradas:
+        print(f"- {nota['name']} | {nota['date']}")
 
 def call_show_statistics():
     print("Por implementar...")
