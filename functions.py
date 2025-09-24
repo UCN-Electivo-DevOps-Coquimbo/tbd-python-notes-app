@@ -20,7 +20,8 @@ def call_list_notes():
     print("Por implementar...")
 
 def call_search_note():
-    print("Por implementar...")
+    searchName = input("Ingrese Título de la nota: ")
+    search_note(searchName)
 
 def call_delete_note():
     print("Por implementar...")
