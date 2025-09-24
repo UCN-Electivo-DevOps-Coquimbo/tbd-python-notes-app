@@ -1,10 +1,12 @@
+from datetime import datetime
 from modules.data_manager import get_notes, save_notes
 
 def edit_note(id):
     notes = get_notes()
 
     for note in notes:
-        if note["id"] == id:
+        print(note)
+        if str(note["id"]) == str(id):
             print("Nota encontrada:")
             
             edit_name = input("Ingrese nuevo Título: ")
@@ -13,15 +15,14 @@ def edit_note(id):
             edit_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
             user_tags = input("Etiquetas (separadas por comas, opcional): ")
             if user_tags:
-                tags = [tag.strip() for tag in user_tags.split(",")]
+                note["tags"] = [tag.strip() for tag in user_tags.split(",")]
             else:
-                tags = []
+                note["tags"] = []
 
             note["name"] = edit_name
             note["author"] = edit_author
             note["content"] = edit_content
             note["date"] = edit_date
-            note["tags"] = user_tags
             
             save_notes(notes)
             return
