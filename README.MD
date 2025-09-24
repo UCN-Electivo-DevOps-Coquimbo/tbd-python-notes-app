@@ -14,7 +14,7 @@ Los estudiantes deberán agruparse de a dos o tres integrantes. Luego, deberán 
 - [ ] Exportar todas las notas a un archivo de texto plano (Definir Estructura).
 - [ ] Importar notas desde un archivo externo (JSON o CSV) (Definir Formato).
 - [ ] Filtrar notas por fecha de creación.
-- [ ] Mostrar estadísticas (cantidad total de notas, notas por fecha, notas por autor).
+- [X] Mostrar estadísticas (cantidad total de notas, notas por fecha, notas por autor).
 
 # Instrucciones
 1. Se debe generar un archivo con su funcionalidad en la carpeta `modules`. Debe llevar por nombre `<nombreFuncion>.py`.

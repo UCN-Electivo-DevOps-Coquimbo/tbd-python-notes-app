@@ -1,5 +1,6 @@
 from datetime import datetime
 from modules.create_note import create_note
+from modules.show_statistics import get_statistics, format_statistics
 
 def call_create_note():
     name = input("Nombre de la nota: ")
@@ -38,4 +39,9 @@ def call_filter_notes_by_date():
     print("Por implementar...")
 
 def call_show_statistics():
-    print("Por implementar...")
+    try:
+        statistics = get_statistics()
+        formatted_stats = format_statistics(statistics)
+        print(formatted_stats)
+    except Exception as e:
+        print(f"Error al obtener las estadísticas: {e}")
