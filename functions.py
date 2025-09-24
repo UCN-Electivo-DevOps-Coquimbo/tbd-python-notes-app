@@ -1,5 +1,7 @@
 from datetime import datetime
 from modules.create_note import create_note
+from modules.data_manager import get_notes
+from modules.notes_filter import filter_notes_by_date
 
 def call_create_note():
     name = input("Nombre de la nota: ")
@@ -35,8 +37,6 @@ def call_import_notes():
     print("Por implementar...")
 
 def call_filter_notes_by_date():
-    from modules.data_manager import get_notes
-    from modules.notes_filtres import filter_notes_by_date
     notas = get_notes()
     # Solicitar fechas al usuario
     fecha_inicio = input("Fecha de inicio (YYYY-MM-DD): ")
