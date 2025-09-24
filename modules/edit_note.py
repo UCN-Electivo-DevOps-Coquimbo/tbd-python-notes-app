@@ -5,9 +5,9 @@ def edit_note(id):
     notes = get_notes()
 
     for note in notes:
-        print(note)
+        
         if str(note["id"]) == str(id):
-            print("Nota encontrada:")
+            print("Nota encontrada:", note)
             
             edit_name = input("Ingrese nuevo Título: ")
             edit_author = input("Ingrese Autor de la nota: ")
