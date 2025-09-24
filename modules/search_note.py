@@ -5,6 +5,7 @@ def search_note(name):
     for note in notes:
         if note["name"] == name:
             print("Nota encontrada:")
+            print("ID:", note["id"])
             print(f"Título: {note['name']}")
             print(f"Autor: {note['author']}")
             print(f"Contenido: {note['content']}")
