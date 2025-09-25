@@ -23,4 +23,3 @@ def importJson(fileName):
     except Exception as e:
         print(f"Ocurrió un error: {e}")
     
-importJson('notes.json')
