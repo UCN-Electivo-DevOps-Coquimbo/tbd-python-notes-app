@@ -1,5 +1,6 @@
 from datetime import datetime
 from modules.create_note import create_note
+from modules.edit_note import edit_note
 
 def call_create_note():
     name = input("Nombre de la nota: ")
@@ -26,7 +27,8 @@ def call_delete_note():
     print("Por implementar...")
 
 def call_edit_note():
-    print("Por implementar...")
+    edit_ID = input("Ingrese ID de la nota: ")
+    edit_note(edit_ID)
 
 def call_export_notes():
     print("Por implementar...")
