@@ -4,6 +4,7 @@ from modules.show_statistics import get_statistics, format_statistics
 from modules.listNotes import listNotes
 from modules.search_note import search_note
 from modules.delete_note import delete_note
+from modules.import_note import importJson
 def call_create_note():
     name = input("Nombre de la nota: ")
     author = input("Autor de la nota: ")
@@ -40,7 +41,8 @@ def call_export_notes():
     print("Por implementar...")
 
 def call_import_notes():
-    print("Por implementar...")
+    fileName = str(input("Nombre del archivo(.json): "))
+    importJson(fileName)
 
 def call_filter_notes_by_date():
     print("Por implementar...")
