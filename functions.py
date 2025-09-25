@@ -6,6 +6,8 @@ from modules.search_note import search_note
 from modules.delete_note import delete_note
 from modules.import_note import importJson
 from modules.edit_note import edit_note
+from modules.data_manager import get_notes
+from modules.notes_filter import filter_notes_by_date
 def call_create_note():
     name = input("Nombre de la nota: ")
     author = input("Autor de la nota: ")
@@ -47,7 +49,14 @@ def call_import_notes():
     importJson(fileName)
 
 def call_filter_notes_by_date():
-    print("Por implementar...")
+    notas = get_notes()
+    # Solicitar fechas al usuario
+    fecha_inicio = input("Fecha de inicio (YYYY-MM-DD): ")
+    fecha_fin = input("Fecha de fin (YYYY-MM-DD): ")
+    notas_filtradas = filter_notes_by_date(notas, fecha_inicio, fecha_fin)
+    print("Notas filtradas por fecha:")
+    for nota in notas_filtradas:
+        print(f"- {nota['name']} | {nota['date']}")
 
 def call_show_statistics():
     try:
