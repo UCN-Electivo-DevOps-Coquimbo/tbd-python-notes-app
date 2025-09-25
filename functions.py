@@ -1,6 +1,7 @@
 from datetime import datetime
 from modules.create_note import create_note
 from modules.show_statistics import get_statistics, format_statistics
+from modules.listNotes import listNotes
 
 def call_create_note():
     name = input("Nombre de la nota: ")
@@ -18,7 +19,7 @@ def call_create_note():
     print("Nota creada exitosamente.")
 
 def call_list_notes():
-    print("Por implementar...")
+    listNotes()
 
 def call_search_note():
     print("Por implementar...")
