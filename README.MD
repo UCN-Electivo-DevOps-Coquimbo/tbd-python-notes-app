@@ -8,7 +8,7 @@ Los estudiantes deberán agruparse de a dos o tres integrantes. Luego, deberán 
 
 - [X] Crear una nota (pide título y contenido por consola, guarda en un archivo JSON).
 - [ ] Listar todas las notas (muestra título, fecha, contenido y autor).
-- [ ] Buscar una nota por título.
+- [X] Buscar una nota por título.
 - [ ] Eliminar una nota de los registros.
 - [ ] Editar una nota existente (según su ID).
 - [ ] Exportar todas las notas a un archivo de texto plano (Definir Estructura).
