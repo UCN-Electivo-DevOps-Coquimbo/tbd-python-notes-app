@@ -1,15 +1,8 @@
 import json
-
-def getNotes():
-    try :
-        with open("notes.json", "r") as archivo_notas:
-            notas = json.load(archivo_notas)
-            return notas
-    except FileNotFoundError:
-        print("Archivo .json no encontrado")
+from modules.data_manager import get_notes
 
 def listNotes():
-    notas = getNotes()
+    notas = get_notes()
     print(" Se encontraron "+ str(len(notas)) + " notas: \n-------------------")
     for i in range (len(notas)):
         print("NOTA "+str(i + 1 ))
