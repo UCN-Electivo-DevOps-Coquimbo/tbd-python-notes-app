@@ -2,15 +2,18 @@ from modules.data_manager import get_notes
 
 def search_note(name):
     notes = get_notes()
+    found = False
     for note in notes:
         if note["name"] == name:
-            print("Nota encontrada:")
+            if not found:
+                print("Notas encontradas:")
+                found = True
+            print("-------------")
             print("ID:", note["id"])
             print(f"Título: {note['name']}")
             print(f"Autor: {note['author']}")
             print(f"Contenido: {note['content']}")
             print(f"Fecha: {note['date']}")
             print(f"Etiquetas: {', '.join(note['tags'])}")
-            return
-
-    print("Nota no encontrada.")
+    if not found:
+        print("No se encontraron notas con ese nombre.")

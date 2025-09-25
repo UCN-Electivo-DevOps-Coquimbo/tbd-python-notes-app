@@ -1,5 +1,7 @@
 from datetime import datetime
+
 from modules.create_note import create_note
+
 from modules.search_note import search_note
 def call_create_note():
     name = input("Nombre de la nota: ")
