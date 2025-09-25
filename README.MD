@@ -8,6 +8,8 @@ Este es un ejercicio para el electivo "Introducción a DevOps", donde deberán a
 
 Los estudiantes deberán agruparse de a dos o tres integrantes. Luego, deberán crear una o más de las siguientes funcionalidades a la aplicación. Todas las funcionalidades deben estar desarrolladas para sumar 5 décimas para la prueba 1.
 
+- [X] Crear una nota (pide título y contenido por consola, guarda en un archivo JSON).
+- [X] Listar todas las notas (muestra título, fecha, contenido y autor).
 - [x] Crear una nota (pide título y contenido por consola, guarda en un archivo JSON).
 - [ ] Listar todas las notas (muestra título, fecha, contenido y autor).
 - [X] Buscar una nota por título.
