@@ -2,7 +2,7 @@ from datetime import datetime
 from modules.create_note import create_note
 from modules.show_statistics import get_statistics, format_statistics
 from modules.listNotes import listNotes
-
+from modules.search_note import search_note
 def call_create_note():
     name = input("Nombre de la nota: ")
     author = input("Autor de la nota: ")
@@ -22,7 +22,8 @@ def call_list_notes():
     listNotes()
 
 def call_search_note():
-    print("Por implementar...")
+    searchName = input("Ingrese Título de la nota: ")
+    search_note(searchName)
 
 def call_delete_note():
     print("Por implementar...")
