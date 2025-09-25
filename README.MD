@@ -12,7 +12,7 @@ Los estudiantes deberán agruparse de a dos o tres integrantes. Luego, deberán 
 - [ ] Eliminar una nota de los registros.
 - [ ] Editar una nota existente (según su ID).
 - [ ] Exportar todas las notas a un archivo de texto plano (Definir Estructura).
-- [ ] Importar notas desde un archivo externo (JSON o CSV) (Definir Formato).
+- [X] Importar notas desde un archivo externo (JSON o CSV) (Definir Formato).
 - [ ] Filtrar notas por fecha de creación.
 - [ ] Mostrar estadísticas (cantidad total de notas, notas por fecha, notas por autor).
 
