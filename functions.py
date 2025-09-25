@@ -1,10 +1,14 @@
 from datetime import datetime
 
 from modules.create_note import create_note
+from modules.show_statistics import get_statistics, format_statistics
 from modules.listNotes import listNotes
-from modules.edit_note import edit_note
 from modules.search_note import search_note
-
+from modules.delete_note import delete_note
+from modules.import_note import importJson
+from modules.edit_note import edit_note
+from modules.data_manager import get_notes
+from modules.notes_filter import filter_notes_by_date
 def call_create_note():
     name = input("Nombre de la nota: ")
     author = input("Autor de la nota: ")
@@ -28,7 +32,11 @@ def call_search_note():
     search_note(searchName)
 
 def call_delete_note():
-    print("Por implementar...")
+    id = input("ID de la nota a eliminar: ")
+    if(delete_note(id)==True):
+        print("Nota eliminada exitosamente.")
+    else:
+        print("No se encontró la nota con el ID proporcionado.")
 
 def call_edit_note():
     edit_ID = input("Ingrese ID de la nota: ")
@@ -38,10 +46,23 @@ def call_export_notes():
     print("Por implementar...")
 
 def call_import_notes():
-    print("Por implementar...")
+    fileName = str(input("Nombre del archivo(.json): "))
+    importJson(fileName)
 
 def call_filter_notes_by_date():
-    print("Por implementar...")
+    notas = get_notes()
+    # Solicitar fechas al usuario
+    fecha_inicio = input("Fecha de inicio (YYYY-MM-DD): ")
+    fecha_fin = input("Fecha de fin (YYYY-MM-DD): ")
+    notas_filtradas = filter_notes_by_date(notas, fecha_inicio, fecha_fin)
+    print("Notas filtradas por fecha:")
+    for nota in notas_filtradas:
+        print(f"- {nota['name']} | {nota['date']}")
 
 def call_show_statistics():
-    print("Por implementar...")
+    try:
+        statistics = get_statistics()
+        formatted_stats = format_statistics(statistics)
+        print(formatted_stats)
+    except Exception as e:
+        print(f"Error al obtener las estadísticas: {e}")
