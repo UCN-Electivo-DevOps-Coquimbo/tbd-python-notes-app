@@ -25,7 +25,7 @@ def call_search_note():
 
 def call_delete_note():
     id = input("ID de la nota a eliminar: ")
-    if(delete_note(id)==True):
+    if delete_note(id):
         print("Nota eliminada exitosamente.")
     else:
         print("No se encontró la nota con el ID proporcionado.")
