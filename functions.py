@@ -3,6 +3,7 @@ from modules.create_note import create_note
 from modules.show_statistics import get_statistics, format_statistics
 from modules.listNotes import listNotes
 from modules.search_note import search_note
+from modules.delete_note import delete_note
 def call_create_note():
     name = input("Nombre de la nota: ")
     author = input("Autor de la nota: ")
@@ -26,7 +27,11 @@ def call_search_note():
     search_note(searchName)
 
 def call_delete_note():
-    print("Por implementar...")
+    id = input("ID de la nota a eliminar: ")
+    if(delete_note(id)==True):
+        print("Nota eliminada exitosamente.")
+    else:
+        print("No se encontró la nota con el ID proporcionado.")
 
 def call_edit_note():
     print("Por implementar...")

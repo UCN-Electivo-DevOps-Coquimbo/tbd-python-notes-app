@@ -3,7 +3,7 @@ from modules.data_manager import get_notes, save_notes
 def create_note(name, author, content, date, tags=None):
     notes = get_notes()
     note = {
-        "id": len(notes) + 1,
+        "id": notes[-1]["id"] + 1 if notes else 1,
         "name": name,
         "author": author,
         "content": content,
