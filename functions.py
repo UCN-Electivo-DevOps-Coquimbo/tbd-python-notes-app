@@ -5,6 +5,7 @@ from modules.listNotes import listNotes
 from modules.search_note import search_note
 from modules.delete_note import delete_note
 from modules.import_note import importJson
+from modules.edit_note import edit_note
 def call_create_note():
     name = input("Nombre de la nota: ")
     author = input("Autor de la nota: ")
@@ -35,7 +36,8 @@ def call_delete_note():
         print("No se encontró la nota con el ID proporcionado.")
 
 def call_edit_note():
-    print("Por implementar...")
+    edit_ID = input("Ingrese ID de la nota: ")
+    edit_note(edit_ID)
 
 def call_export_notes():
     print("Por implementar...")
